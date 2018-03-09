@@ -6,93 +6,74 @@
 
 using namespace std;
 
+int consultar(int number[] ){
+	cout<<"su saldo es $";
+   cout<<number[1];
+}
+
 int main(){
-	int foo [5];
-	int mil, dos,  cinco,diez,veinte, cincuenta, cien;
-   int Mcincuenta, Mcien, Mdoscientos, Mquinientos;
-   int totalBilletes, totalMonedas;
-   int pass,userpasss;
-   int conversion,totalDinero;
-   int dolar = 2932;
-   int euro = 3468;
-   int bitcoint  = 17050373;
-   int pesoMexicano = 161;
+   int codigo[5],salario[5],trans[5],seleccion,salMin,subcidio,user;
+   float pension[5],eps[5],pago[5];
 
-   pass = 1234;
-	cout<<"cuantos billetes de mil tieme ?\n";
-   cin>>mil;
-   cout<<"cuantos billetes de dosmil tieme ?\n";
-   cin>>dos;
-   cout<<"cuantos billetes de cinco mil tieme ?\n";
-   cin>>cinco;
-   cout<<"cuantos billetes de diez mil tieme ?\n";
-   cin>>diez;
-   cout<<"cuantos billetes de veinte mil tieme ?\n";
-   cin>>veinte;
-   cout<<"cuantos billetes de cincuenta mil tieme ?\n";
-   cin>>cincuenta;
-   cout<<"cuantos billetes de cien mil tieme ?\n";
-   cin>>cien;
-
-   cout<<"cuantas monedas de cincuenta tiene ?\n";
-   cin>>Mcincuenta;
-   cout<<"cuantas monedas de cien tiene ?\n";
-   cin>>Mcien;
-   cout<<"cuantas monedas de doscientos tiene ?\n";
-   cin>>Mdoscientos;
-   cout<<"cuantas monedas de quinientos tiene ?\n";
-   cin>>Mquinientos;
-
-	/*esta es la zona donde se suma*/
-
-   totalBilletes = (mil * 1000) + (dos * 2000) + (cinco*5000) + (diez * 10000)+ (veinte * 20000) + (cincuenta * 50000) + (cien * 100000);
-   totalMonedas = (Mcincuenta * 50) +(Mcien * 100) + (Mdoscientos*200) + (Mquinientos * 500);
-   totalDinero = totalBilletes +  totalMonedas;
-   cout<<" su Total en billetes es \n";
-   cout<< totalBilletes;
-   cout<<"\n";
-
-   cout<<" su Total en monedas es \n";
-   cout<< totalMonedas;
-   cout<<"\n";
-
-	/* Zona de converciones*/
-   cout<<"ingrese la contraseña \n";
-   cin>>userpasss;
-   if(userpasss != pass){
-   	cout<<"contraseña invalida";
-   }
-   else{
-   	cout<<"quiere convertir su dinero en \n" ;
-      cout<<"1-dolares\n" ;
-      cout<<"2-euros\n" ;
-      cout<<"3 bitcoint\n" ;
-      cout<<"4-peso mexicano\n" ;
-      cin>>conversion;
-
-   	 switch ( conversion )
-      {
-      	case 1:
-         	cout<<"su total en dolares es ";
-         	cout<<totalDinero/dolar;
-         break;
-      	case 2:
-         	cout<<"su total en euros es ";
-         	cout<<totalDinero/euro;
-         break;
-         case 3:
-         	cout<<"su total en bitcoint es ";
-         	cout<<totalDinero/bitcoint;
-         break;
-         case 4:
-         	cout<<"su total en bitcoint es ";
-         	cout<<totalDinero/pesoMexicano;
-         break;
-         default:
-         	cout<<"ingresoun numeroinvalido  ";
+   cout <<"ingrese el valor del salario minimo\n";
+   cin >>salMin;
+   cout <<"ingrse el valor del subcidio\n";
+   cin >> subcidio;
+   for(int i = 0;i<5;i++){
+   	cout <<"ingrese codigo del empleado\n";
+   	cin >>codigo[i];
+      cout <<"ingrese salario del empleado\n";
+      cin >>salario[i];
+      if(salario[i] < (salMin*2)){
+      	cout <<"ingrese subcidio de transporte del empleado\n";
+         cin >>trans[i];
       }
-
-
+      else{
+         trans[i] = 0;
+      }
+      cout <<"ingrese pension del empleado\n";
+      cin >>pension[i];
+      cout <<"ingrese pago eps del empleado\n";
+      cin >>eps[i];
    }
-   getch();
+
+   cout<<"Menu de opciones\n";
+   cout<<"1) consultar por empleado\n";
+   cout<<"2) modificar pagos de trabajador \n";
+   cout<<"3) Listar \n";
+   cin>>seleccion;
+
+   switch ( seleccion )
+   {
+   	case 1:
+      	cout<<"dijite el numero del usuario \n";
+         cin>>user;
+         cout<<codigo[user];
+         cout<<salario[user];
+         cout<<trans[user];
+         cout<<pension[user];
+         cout<<pago[user];
+   	break;
+      case 2:
+      	cout<<"dijite el numero del usuario \n";
+         cin>>user;
+         cin>>codigo[user];
+         cin>>salario[user];
+         cin>>trans[user];
+         cin>>pension[user];
+         cin>>pago[user];
+      break
+      case 3:
+      	for(int i = 0;i<5;i++){
+         	cout<<"user \n";
+            cout<<codigo[i];
+            cout<<salario[i]
+            cout<<trans[i]
+            cout<<pension[i]
+            cout<<pago[i]
+         }
+      break
+   }
+
+	getch();
 }
