@@ -1,4 +1,4 @@
-#include <iostream>
+ #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
 #include <random>
@@ -62,17 +62,17 @@ int main(){
          cin>>trans[user];
          cin>>pension[user];
          cin>>pago[user];
-      break
+      break;
       case 3:
-      	for(int i = 0;i<5;i++){
+      	for(int e = 0;e<5;e++){
          	cout<<"user \n";
-            cout<<codigo[i];
-            cout<<salario[i]
-            cout<<trans[i]
-            cout<<pension[i]
-            cout<<pago[i]
-         }
-      break
+            cout<<codigo[e];
+            cout<<salario[e];
+            cout<<trans[e];
+            cout<<pension[e];
+            cout<<pago[e];
+         };
+      break;
    }
 
 	getch();
