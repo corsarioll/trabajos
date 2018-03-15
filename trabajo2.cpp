@@ -1,4 +1,4 @@
- #include <iostream>
+#include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
 #include <random>
@@ -48,28 +48,43 @@ int main(){
    	case 1:
       	cout<<"dijite el numero del usuario \n";
          cin>>user;
+         cout<<"el codigo de el empleado es \n";
          cout<<codigo[user];
+         cout<<"el salario de el empleado es\n";
          cout<<salario[user];
+         cout<<"el subcidio de transporte es  \n";
          cout<<trans[user];
+         cout<<"la pencion de el trabajador \n";
          cout<<pension[user];
+         cout<<"el pago de el empleado es \n";
          cout<<pago[user];
    	break;
       case 2:
       	cout<<"dijite el numero del usuario \n";
          cin>>user;
+         cout<<"cambiar el codigo de el empleado es \n";
          cin>>codigo[user];
+         cout<<"cambiar el salario de el empleado es\n";
          cin>>salario[user];
+         cout<<"cambiar el subcidio de transporte es  \n";
          cin>>trans[user];
+         cout<<"cambiar la pencion de el trabajador \n";
          cin>>pension[user];
+         cout<<"cambiar el pago de el empleado es \n";
          cin>>pago[user];
       break;
       case 3:
       	for(int e = 0;e<5;e++){
-         	cout<<"user \n";
+         	cout<<"el empleado \n";
+            cout<<"el codigo de el empleado es \n";
             cout<<codigo[e];
+            cout<<"el salario de el empleado es\n";
             cout<<salario[e];
+            cout<<"el subcidio de transporte es  \n";
             cout<<trans[e];
+            cout<<"la pencion de el trabajador \n";
             cout<<pension[e];
+            cout<<"el pago de el empleado es \n";
             cout<<pago[e];
          };
       break;
