@@ -28,11 +28,13 @@ int main(){
       	cout << e + 1 ;
       	cout << " numero\n";
       	cin  >> numbers[e];
-         for(int a = 0; a<e;a++){
-        	 	while(numbers[e] != numbers[a){
-            	cout << "por favor ingrese un numero que no este repetido \n";
+         for(int a = 0;a<4;a++){
+         	if(numbers[e] == numbers[a]){
+         		while(numbers[e] != numbers[a]){
+               cout << "por favor ingrese un numero que no este repetido \n";
             	cin  >> numbers[e];
-         	}
+         		}
+            }
          }
       }
       for(int e = 0;e<4;e++){
