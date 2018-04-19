@@ -21,19 +21,17 @@ int main(){
    randoNum[3]=4;
    for(int i = 0;i<games;i++){
    	cout << "este es tu ";
-      cout << i + 1;
+      cout << (i + 1);
       cout << " juego\n";
       for(int e = 0;e<4;e++){
       	cout << "ingrese ";
-      	cout << e + 1 ;
+      	cout << (e + 1);
       	cout << " numero\n";
       	cin  >> numbers[e];
-         for(int a = 0;a<4;a++){
-         	if(numbers[e] == numbers[a]){
-         		while(numbers[e] != numbers[a]){
-               cout << "por favor ingrese un numero que no este repetido \n";
+         for(int a = 0;a<e;a++){
+            if(numbers[e] == numbers[a]){
+            	cout << "por favor ingrese un numero que no este repetido \n";
             	cin  >> numbers[e];
-         		}
             }
          }
       }
