@@ -12,7 +12,7 @@ int consultar(int number[] ){
 }
 
 int main(){
-   int games,numbers[4],randoNum[4];
+   int games,numbers[4],randoNum[4],test;
 	cout <<"ingrese la cantidad de veces que quiere jugar\n";
    cin >>games;
    randoNum[0]=1;
@@ -29,9 +29,10 @@ int main(){
       	cout << " numero\n";
       	cin  >> numbers[e];
          for(int a = 0;a<e;a++){
-            if(numbers[e] == numbers[a]){
-            	cout << "por favor ingrese un numero que no este repetido \n";
-            	cin  >> numbers[e];
+         	while(numbers[e] ==  numbers[a]){
+            	cout << "dentro the el fuking while -------------- \n";
+               cout << "por favor ingrese un numero que no este repetido \n";
+               cin  >> numbers[e];
             }
          }
       }
