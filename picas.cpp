@@ -30,7 +30,6 @@ int main(){
       	cin  >> numbers[e];
          for(int a = 0;a<e;a++){
          	while(numbers[e] ==  numbers[a]){
-            	cout << "dentro the el fuking while -------------- \n";
                cout << "por favor ingrese un numero que no este repetido \n";
                cin  >> numbers[e];
             }
