@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <random>
 #include <conio.h>
+#include <string>
 
 using namespace std;
 
@@ -21,11 +22,26 @@ int main(){
    int sPedido;
    int intentos = 1;
    bool check = false;
-   char charA[3] = { 'asda', 'asdb', 'asdc' };
+   char colour[4][10] = {"Blue", "Red", "Orange","Yellow"};
+   char users[4][10] = { "user1", "user2", "user3", "user4"};
+   char pass[4][10] = { "user1", "user2", "user3", "user4"};
+   int foo [5] = { 10000, 200000, 30000, 400000 };
+   std::string username ("green apple");
+  	std::string password ("red apple");
+
    cout<<"Bienvenido al banco robamas\n";
    cout<<"Ingrse su clave\n";;
 
    cin>>claveIngr;
+   for(int i = 0l; i <= 4; i = i + 1){
+      cout<<username;
+      cin>>password;
+      cout<<"\n";
+      if (username.compare(password) != 0){
+    		cout << username << " is not " << password << '\n';
+      }
+
+   }
 
 	while(claveIngr != clave && intentos < 3 )
 	{
